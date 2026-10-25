@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import shopFront from "@/public/images/shop-front.webp";
 import {
+  brandGroups,
   copy,
   products,
   MAPS_EMBED_URL,
@@ -214,6 +215,36 @@ export default function LandingPage() {
                   </article>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        <section id="brands" aria-labelledby="brands-title" className="border-t border-[#e2e5e9] bg-white">
+          <div className="mx-auto flex max-w-[1200px] flex-col gap-5 px-4 py-10 md:gap-9 md:px-8 md:py-[72px]">
+            <div className="flex flex-col gap-1.5 md:gap-2">
+              <h2 id="brands-title" className="text-[30px] leading-[1.15] font-extrabold md:text-[40px]">{t.brandsTitle}</h2>
+              <p className="text-[17px] leading-[1.45] text-muted md:text-[19px]">{t.brandsText}</p>
+            </div>
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-6">
+              {brandGroups.map((group) => (
+                <div key={group.en} className="flex flex-col gap-3 rounded-[10px] border border-line bg-surface p-4 md:gap-4 md:p-6">
+                  <h3 className="flex items-baseline justify-between gap-3 text-[15px] font-bold tracking-[0.06em] text-muted uppercase">
+                    <span>{group[lang]}</span>
+                    <span lang={other} className="text-sm font-semibold tracking-normal normal-case">{group[other]}</span>
+                  </h3>
+                  <ul className="flex flex-col gap-2">
+                    {group.brands.map((brand) => (
+                      <li
+                        key={brand}
+                        lang="en"
+                        className="flex min-h-14 items-center rounded-lg border border-line bg-white px-4 text-xl font-extrabold md:min-h-16 md:text-2xl"
+                      >
+                        {brand}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
         </section>

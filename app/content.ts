@@ -41,6 +41,18 @@ export const products: Product[] = [
   },
 ];
 
+export type BrandGroup = {
+  en: string;
+  hi: string;
+  brands: string[];
+};
+
+export const brandGroups: BrandGroup[] = [
+  { en: "TMT Bars", hi: "टीएमटी सरिया", brands: ["Goel TMT", "Kamdhenu"] },
+  { en: "Steel Pipes", hi: "स्टील पाइप", brands: ["Tata Pipes", "Prakash Surya"] },
+  { en: "Cement", hi: "सीमेंट", brands: ["ACC", "UltraTech", "Wonder Cement"] },
+];
+
 export const copy = {
   en: {
     name: "Gurunanak Steel Center",
@@ -64,6 +76,8 @@ export const copy = {
     productsTextMobile: "Tap “Ask price” to call about current prices and availability.",
     askPrice: "Ask price",
     askPriceFor: (name: string) => `Ask price for ${name}`,
+    brandsTitle: "Brands We Deal In",
+    brandsText: "We stock trusted brands of TMT bars, steel pipes, and cement.",
     pricesTitle: "Looking for Product Prices?",
     pricesText:
       "Call us to enquire about current prices and availability for steel, MS pipes, roofing solutions, cement, and other construction materials.",
@@ -102,6 +116,8 @@ export const copy = {
     productsTextMobile: "मौजूदा भाव और उपलब्धता जानने के लिए “भाव पूछें” दबाएँ।",
     askPrice: "भाव पूछें",
     askPriceFor: (name: string) => `${name} का भाव पूछें`,
+    brandsTitle: "हमारे ब्रांड",
+    brandsText: "हम टीएमटी सरिया, स्टील पाइप और सीमेंट के भरोसेमंद ब्रांड रखते हैं।",
     pricesTitle: "उत्पादों के भाव जानने हैं?",
     pricesText:
       "स्टील, एमएस पाइप, रूफिंग शीट, सीमेंट और अन्य निर्माण सामग्री के मौजूदा भाव और उपलब्धता के लिए हमें कॉल करें।",

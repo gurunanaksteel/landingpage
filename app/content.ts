@@ -19,6 +19,9 @@ export const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Gurunanak%20Steel%20Center%2C%20Lakkad%20Ganj%2C%20Itarsi";
 export const MAPS_EMBED_URL =
   "https://maps.google.com/maps?q=Gurunanak%20Steel%20Center%2C%20Lakkad%20Ganj%2C%20Itarsi&output=embed";
+export const INSTAGRAM_HANDLE = "gurunank_steel_itarsi";
+export const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}/`;
+export const INSTAGRAM_EMBED_URL = `${INSTAGRAM_URL}embed`;
 
 export type Product = {
   en: string;
@@ -85,6 +88,10 @@ export const copy = {
     aboutText:
       "Gurunanak Steel Center provides steel, iron, and construction material solutions in Itarsi. Contact us to enquire about product prices and availability.",
     serving: "Serving Itarsi and nearby areas",
+    instagramTitle: "Follow Us on Instagram",
+    instagramText: "See our latest stock, brand offers, and updates from the shop.",
+    instagramFollow: "Follow on Instagram",
+    instagramFrameTitle: "Gurunanak Steel Center on Instagram",
     contactTitle: "Visit Our Shop",
     phone: "Phone",
     mapTitle: "Map showing Gurunanak Steel Center in Itarsi",
@@ -125,6 +132,10 @@ export const copy = {
     aboutText:
       "गुरुनानक स्टील सेंटर इटारसी में स्टील, लोहा और निर्माण सामग्री उपलब्ध कराता है। उत्पादों के भाव और उपलब्धता के लिए हमसे संपर्क करें।",
     serving: "इटारसी और आसपास के क्षेत्रों में सेवा",
+    instagramTitle: "Instagram पर हमें फ़ॉलो करें",
+    instagramText: "हमारा नया स्टॉक, ब्रांड ऑफ़र और दुकान की ताज़ा जानकारी देखें।",
+    instagramFollow: "Instagram पर फ़ॉलो करें",
+    instagramFrameTitle: "Instagram पर गुरुनानक स्टील सेंटर",
     contactTitle: "हमारी दुकान पर आएँ",
     phone: "फ़ोन",
     mapTitle: "इटारसी में गुरुनानक स्टील सेंटर का नक्शा",

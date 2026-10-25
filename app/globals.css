@@ -1,26 +1,30 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-mukta), system-ui, sans-serif;
+
+  --color-ink: #1d2125;
+  --color-body: #3f4650;
+  --color-muted: #4b5563;
+  --color-line: #d9dde2;
+  --color-line-strong: #c5cbd3;
+  --color-surface: #f3f4f6;
+  --color-placeholder: #e4e7eb;
+  --color-band: #23292f;
+  --color-accent: #c2410c;
+  --color-accent-hover: #9a3412;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+/* Keep section headings clear of the sticky header when jumping via nav links. */
+section[id] {
+  scroll-margin-top: 80px;
 }

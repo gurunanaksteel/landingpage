@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import shopFront from "@/public/images/shop-front.webp";
 import {
   brandGroups,
@@ -16,6 +16,7 @@ import {
   PHONE_HREF,
   type Lang,
 } from "./content";
+import { trackCallConversion } from "./google-tag";
 
 function PhoneIcon({ size = 20 }: { size?: number }) {
   return (
@@ -103,8 +104,15 @@ export default function LandingPage() {
     document.documentElement.lang = lang;
   }, [lang]);
 
+  // Every Call button is a tel: link, so one handler counts them all as Ads conversions.
+  function handleClick(event: MouseEvent<HTMLDivElement>) {
+    if ((event.target as Element).closest('a[href^="tel:"]')) {
+      trackCallConversion();
+    }
+  }
+
   return (
-    <div className="flex min-w-0 flex-1 flex-col bg-white text-ink">
+    <div onClick={handleClick} className="flex min-w-0 flex-1 flex-col bg-white text-ink">
       <header className="sticky top-0 z-20 border-b border-line bg-white">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-3 px-4 py-2.5 md:gap-6 md:px-8 md:py-3.5">
           <a href="#top" className="flex min-w-0 items-center gap-2.5 text-ink md:gap-3">
@@ -148,6 +156,9 @@ export default function LandingPage() {
             </div>
 
             <div className="flex min-w-0 flex-col gap-[18px] md:flex-[1_1_480px] md:gap-6">
+              <p className="-mb-2 self-start rounded-md bg-surface px-3 py-1.5 text-[15px] font-bold tracking-[0.04em] text-accent-hover uppercase md:-mb-3 md:text-base">
+                {t.since}
+              </p>
               <h1 className="text-4xl leading-[1.12] font-extrabold tracking-[-0.01em] md:text-[56px] md:leading-[1.08]">{t.heroTitle}</h1>
               <p className="max-w-[560px] text-lg leading-normal text-body md:text-[21px]">{t.heroText}</p>
               <div className="flex flex-col gap-3 md:flex-row md:flex-wrap md:gap-3.5">

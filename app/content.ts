@@ -67,6 +67,7 @@ export const copy = {
     callNowNumber: `Call Now — ${PHONE_DISPLAY}`,
     directions: "Get Directions",
     directionsShort: "Directions",
+    since: "Trusted in Itarsi since 1995",
     heroTitle: "Steel, Iron & Construction Materials in Itarsi",
     heroText:
       "MS pipes, roofing solutions, cement, welding materials, and more. Contact us for current prices and product availability.",
@@ -86,8 +87,8 @@ export const copy = {
       "Call us to enquire about current prices and availability for steel, MS pipes, roofing solutions, cement, and other construction materials.",
     aboutTitle: "About the Business",
     aboutText:
-      "Gurunanak Steel Center provides steel, iron, and construction material solutions in Itarsi. Contact us to enquire about product prices and availability.",
-    serving: "Serving Itarsi and nearby areas",
+      "Since 1995, Gurunanak Steel Center has provided steel, iron, and construction material solutions in Itarsi. Contact us to enquire about product prices and availability.",
+    serving: "Serving Itarsi and nearby areas since 1995",
     instagramTitle: "Follow Us on Instagram",
     instagramText: "See our latest stock, brand offers, and updates from the shop.",
     instagramFollow: "Follow on Instagram",
@@ -111,6 +112,7 @@ export const copy = {
     callNowNumber: `अभी कॉल करें — ${PHONE_DISPLAY}`,
     directions: "रास्ता देखें",
     directionsShort: "रास्ता",
+    since: "1995 से इटारसी का भरोसा",
     heroTitle: "इटारसी में स्टील, लोहा और निर्माण सामग्री",
     heroText:
       "एमएस पाइप, रूफिंग शीट, सीमेंट, वेल्डिंग सामग्री और बहुत कुछ। मौजूदा भाव और उपलब्धता के लिए हमसे संपर्क करें।",
@@ -130,8 +132,8 @@ export const copy = {
       "स्टील, एमएस पाइप, रूफिंग शीट, सीमेंट और अन्य निर्माण सामग्री के मौजूदा भाव और उपलब्धता के लिए हमें कॉल करें।",
     aboutTitle: "हमारे बारे में",
     aboutText:
-      "गुरुनानक स्टील सेंटर इटारसी में स्टील, लोहा और निर्माण सामग्री उपलब्ध कराता है। उत्पादों के भाव और उपलब्धता के लिए हमसे संपर्क करें।",
-    serving: "इटारसी और आसपास के क्षेत्रों में सेवा",
+      "गुरुनानक स्टील सेंटर 1995 से इटारसी में स्टील, लोहा और निर्माण सामग्री उपलब्ध करा रहा है। उत्पादों के भाव और उपलब्धता के लिए हमसे संपर्क करें।",
+    serving: "1995 से इटारसी और आसपास के क्षेत्रों में सेवा",
     instagramTitle: "Instagram पर हमें फ़ॉलो करें",
     instagramText: "हमारा नया स्टॉक, ब्रांड ऑफ़र और दुकान की ताज़ा जानकारी देखें।",
     instagramFollow: "Instagram पर फ़ॉलो करें",

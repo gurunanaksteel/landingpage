@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Mukta } from "next/font/google";
 import Script from "next/script";
+import { GOOGLE_TAG_ID } from "./google-tag";
 import "./globals.css";
-
-const GOOGLE_TAG_ID = "AW-18520330456";
 
 const mukta = Mukta({
   variable: "--font-mukta",

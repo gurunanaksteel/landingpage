@@ -7,6 +7,9 @@ import {
   brandGroups,
   copy,
   products,
+  INSTAGRAM_EMBED_URL,
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
   MAPS_EMBED_URL,
   MAPS_URL,
   PHONE_DISPLAY,
@@ -35,6 +38,16 @@ function PinIcon({ size = 20, className }: { size?: number; className?: string }
     <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
       <circle cx="12" cy="10" r="3" />
+    </svg>
+  );
+}
+
+function InstagramIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
     </svg>
   );
 }
@@ -275,6 +288,40 @@ export default function LandingPage() {
           </div>
         </section>
 
+        <section id="instagram" aria-labelledby="instagram-title" className="border-t border-[#e2e5e9] bg-white">
+          <div className="mx-auto flex max-w-[1200px] flex-col gap-5 px-4 py-10 md:flex-row md:flex-wrap md:items-center md:gap-x-16 md:gap-y-8 md:px-8 md:py-[72px]">
+            <div className="flex min-w-0 flex-col gap-3.5 md:flex-[1_1_320px] md:gap-4">
+              <h2 id="instagram-title" className="text-[30px] leading-[1.15] font-extrabold md:text-[40px]">{t.instagramTitle}</h2>
+              <p className="text-lg leading-normal text-body md:text-xl">{t.instagramText}</p>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 self-start py-1 text-lg font-bold text-accent hover:text-accent-hover md:text-[19px]"
+              >
+                @{INSTAGRAM_HANDLE}
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${btnDark} mt-1 h-14 gap-2.5 px-6 text-[19px] md:h-[58px] md:self-start`}
+              >
+                <InstagramIcon />
+                {t.instagramFollow}
+              </a>
+            </div>
+            <div className="h-[440px] min-w-0 overflow-hidden rounded-[10px] border border-line bg-white md:h-[600px] md:flex-[1.4_1_480px]">
+              <iframe
+                title={t.instagramFrameTitle}
+                src={INSTAGRAM_EMBED_URL}
+                loading="lazy"
+                className="size-full border-0"
+              />
+            </div>
+          </div>
+        </section>
+
         <section id="contact" className="border-t border-[#e2e5e9] bg-surface">
           <div className="mx-auto flex max-w-[1200px] flex-col gap-[18px] px-4 py-10 md:gap-8 md:px-8 md:py-[72px]">
             <h2 className="text-[30px] leading-[1.15] font-extrabold md:text-[40px]">{t.contactTitle}</h2>
@@ -341,6 +388,15 @@ export default function LandingPage() {
               </span>
               <a href={PHONE_HREF} className="self-start py-2 text-lg font-bold text-[#e5e7eb] hover:text-white hover:underline md:py-1.5 md:text-[19px]">
                 {PHONE_DISPLAY}
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 self-start py-2 text-base text-[#e5e7eb] hover:text-white hover:underline md:py-1 md:text-[17px]"
+              >
+                <InstagramIcon size={18} />
+                @{INSTAGRAM_HANDLE}
               </a>
             </div>
             <div className="flex flex-col gap-2.5 md:flex-[1_1_320px]">
